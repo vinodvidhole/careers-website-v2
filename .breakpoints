@@ -1,18 +1,3 @@
 {
-  "files": {
-    "templates/home.html": [
-      {
-        "id": "9d48f929-36c6-4aa4-828d-203abb0c167b",
-        "line": 15,
-        "version": 1288,
-        "index": 744
-      },
-      {
-        "id": "a7ee6a09-7a08-4981-8d2b-fc68eda28882",
-        "line": 22,
-        "version": 1288,
-        "index": 1397
-      }
-    ]
-  }
+  "files": {}
 }
