@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 import pymysql
 import os
 
@@ -22,5 +22,17 @@ def load_jobs_from_db():
       for row in conn.execute(stmt):
           jobs.append(dict(row))
       return jobs  
-    
+
+def load_job_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(
+      text("SELECT * FROM jobs WHERE id = :val"),
+      val=id
+    )
+    rows = result.all()
+    if len(rows) == 0:
+      return None
+    else:
+      return dict(rows[0])
+
 
